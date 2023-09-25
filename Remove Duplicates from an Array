@@ -1,0 +1,14 @@
+```javascript
+function dup(arr){
+let unique = [];
+for(let i=0;i<arr.length; i++){
+  if(unique.indexOf(arr[i])===-1){
+    unique.push(arr[i])
+  }
+}
+return unique
+}
+const arrA = [1,2,2,2,3,3,3,4,4,4,5,6,7,8]
+const getOut = dup(arrA)
+console.log(getOut) 
+```
