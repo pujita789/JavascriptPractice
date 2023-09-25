@@ -1,0 +1,20 @@
+```javascript
+function fizzBuzz(num){
+let result = []
+for(let i = 1 ; i<=num ; i++){
+if(i%3===0 && i%5!==0){
+result.push( "FIZZ")
+}else if(i%5===0 && i%3!==0) {
+result.push("BUZZ")
+}else if(i%3===0 && i%5===0){
+result.push("FizzBuzz")
+}else{
+result.push(i)
+}
+}
+return result
+}
+let num = prompt("Enter a range")
+let fizzyBuzzy=fizzBuzz(num)
+console.log(fizzyBuzzy)
+```
