@@ -1,0 +1,15 @@
+
+
+function palindrome(str){
+let strRev = ""
+for(let i = str.length-1 ; i>=0 ; i--){
+strRev+=str[i]
+}
+if(str===strRev){
+return "This is a palindrome!"
+}else{
+return "This is not a palindrome!"
+}
+
+}
+console.log(palindrome("madam")) 
