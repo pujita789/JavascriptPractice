@@ -1,0 +1,10 @@
+```javascript
+function ang(str1, str2){
+let strNew = str1.toLowerCase().replace(/[a-z]/g, ' ')
+let strNew2 = str2.toLowerCase().replace(/[a-z]/g, ' ')
+return strNew === strNew2
+}
+let stri = "note";
+let str3 = "toen"
+console.log(ang(stri,str3)) 
+```
