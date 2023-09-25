@@ -1,0 +1,14 @@
+```javascript
+function missNum(arr){
+let temp = [];
+let n = arr.length+1
+for(let i=1;i<=n ; i++){
+if(!arr.includes(i)){
+ temp.push(i)
+}
+}
+return temp
+}
+let temp= [1,2,3,4,6]
+console.log(missNum(temp)) 
+```
