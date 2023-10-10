@@ -13,3 +13,15 @@ return "This is not a palindrome!"
 
 }
 console.log(palindrome("madam")) 
+//with inbuilt functionalities
+function isPallindrome(str) {
+  let revStr = str.split(" ").reverse().join("");
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === revStr[i]) {
+      return "Its a pallindrome!!";
+    }
+  }
+  return "Its not a pallindrome!!";
+}
+let str = prompt("Enter a string:");
+console.log(isPallindrome(str));
