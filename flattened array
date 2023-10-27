@@ -1,0 +1,17 @@
+function arrayNest(ary){
+let result =[];
+function aray(subArr){
+for(let i=0; i<subArr.length;i++){
+if(Array.isArray(subArr[i])){
+aray(subArr[i])
+}else{
+result.push(subArr[i])
+}
+}
+}
+aray(ary)
+return result
+}
+const ar=[2,3,[4,5],[8,[9,9],8]];
+const flatAr=arrayNest(ar)
+console.log(flatAr)
