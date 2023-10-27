@@ -1,0 +1,15 @@
+function pairCouple(arr,n){
+let result =[];
+for(let i=0 ; i<arr.length;i++){
+for(let j=i+1; j<arr.length;j++){
+if(arr[i]+arr[j]===n){
+result.push([arr[i],arr[j]])
+}
+}
+}
+return result;
+}
+const pairArr=[2,3,4,5,1,0];
+const num=5;
+const res=pairCouple(pairArr,num);
+console.log(res)
