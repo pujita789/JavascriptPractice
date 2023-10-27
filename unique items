@@ -1,0 +1,19 @@
+
+function uniqu(ar){
+const unique=new Set(ar);
+return Array.from(unique)
+}
+const arrA=[3,4,5,6,3,4,5]
+const uniqueArray=uniqu(arrA);
+console.log(uniqueArray)
+//using for of
+function diffArra(a){
+let res=[];
+for(const it of a){
+if(!res.includes(it))
+res.push(it)
+}
+return res
+}
+const qn=[0,2,2,3,3,4]
+console.log(diffArra(qn))
