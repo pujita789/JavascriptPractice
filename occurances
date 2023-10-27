@@ -1,0 +1,16 @@
+//Find the occurrence of each element from the list
+
+function occ(arr){
+const count={}
+for(const item of arr){
+if(count[item]){
+count[item]++
+}else{
+count[item]=1
+}
+}
+return count;
+}
+const it=[9,7,9,0];
+const countI=occ(it)
+console.log(countI)
