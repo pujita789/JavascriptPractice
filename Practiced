@@ -1,0 +1,139 @@
+//finding largest number in an array
+function largestNum(arr){
+
+let largest = arr[0];
+for(let i=0; i<arr.length;i++){
+if(arr[i]>largest){
+largest = arr[i]
+}
+}
+return largest
+}
+let narr=[3,44,5];
+console.log(largestNum(narr))
+//fizzbuzz
+function fizzBuzz(num){
+let result =[]
+for(let i=1;i<=num; i++){
+if(i%3===0 && i%5===0){
+result.push("Fizzbuzz")
+}else if (i%3===0 && i%5!==0){
+result.push("Fizz")
+}else if(i%5===0 && i%3!==0){
+result.push("Buzz")
+}else{
+result.push(i)
+}
+}
+return result
+}
+let numBer =15;
+console.log(fizzBuzz(numBer))
+//longest word in a sentence
+function longestWord(str){
+let splitStr = str.split(' ');
+let longest=0;
+let wodL=""
+for(let i=0;i<splitStr.length; i++){
+if(longest<splitStr[i].length){
+ longest = splitStr[i].length;
+ wordL= splitStr[i]
+}
+}
+return wordL
+}
+let stringSent = "The crazy fox is walking!"
+console.log(longestWord(stringSent))
+//pallindrome 
+function isPallindrome(str){
+let strRev = str.split(" ").reverse().join("");
+for(let i=0 ;i<str.length ;i++){
+if(str[i]===strRev[i]){
+return "This is a pallindrome"
+}
+return "This is not a pallindrome!"
+}
+}
+let string = "madam"
+console.log(isPallindrome(string))
+//prime Number 
+
+function isPrime(num){
+if(num%2===0 ){
+return "its not a prime num"
+}
+if(num===1){
+return "this is not prime neither composite!!"
+}
+for(let i=2; i<Math.sqrt(num); i++){
+if( num%i===0){
+return "This is not a prime num"
+}
+}
+return "This is  a prime num"
+}
+let number = 15;
+console.log(isPrime(number))
+//sum of n numbers
+function  naturalSum(num){
+let sum=0;
+for(let i=0; i<=num ; i++){
+sum+=i
+}
+return sum
+}
+let numNatural =11;
+console.log(naturalSum(numNatural))
+//flattend array
+function flatArray(arr){
+let flatten =[];
+function nestArr(subArr){
+for(let i=0; i<subArr.length;i++){
+if(Array.isArray(subArr[i])){
+nestArr(subArr[i])
+}else{
+flatten.push(subArr[i])
+}
+}
+}
+nestArr(arr);
+return flatten
+}
+let ar = [1,2,[3,4,[5,[6,7]]]]
+console.log(flatArray(ar))
+//flat aray
+function flat(arra){
+return arra.flat()
+
+}
+let arr=[3,[4,5]]
+console.log(flat(arr))
+//sum of pairs
+function pairsofsum(arr,n){
+let sumPair=[];
+for(let i=0;i<arr.length;i++){
+ for(let j=i+1 ; j<arr.length ; j++){
+ if(arr[i]+arr[j]===n){
+ sumPair.push([arr[i],arr[j]])
+ }
+ }
+}
+return sumPair
+}
+let arraa=[2,5,1,0,3,4]
+let numberSum=5;
+console.log(pairsofsum(arraa,numberSum))
+//occurances of each elment
+function occ(array){
+let occur={}
+for(let i of array){
+if(occur[i]){
+occur[i]++
+}else{
+occur[i]=1
+}
+}
+return occur;
+}
+let anArray = [2,2, 3,4,4,4,5,7,9];
+console.log(occ(anArray))
